@@ -4,7 +4,7 @@ import TipContent from './components/TipContent';
 
 function App() {
   return (
-    <div className="font-space">
+    <div className=" bg-teal h-screen font-space flex justify-center flex-col items-center">
       <Header />
       <TipContent />
     </div>
