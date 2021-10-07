@@ -1,5 +1,6 @@
 import Bill from './Bill';
 import SelectTip from './SelectTip';
+import TipAmount from './TipAmount';
 import NumberOfPeople from './Utilities/NumberOfPeople';
 
 const { useState } = require('react');
@@ -7,10 +8,16 @@ const { useState } = require('react');
 const TipContent = () => {
   const [total, setTotal] = useState('');
   const [custom, setCustom] = useState('');
-  const [people, setPeople] = useState('');
+  const [people, setPeople] = useState(0);
+  const [tipValue, setTipValue] = useState(0);
 
-  const handleTip = (event) => {
+  const handleTotal = (event) => {
     setTotal(event.target.value);
+  };
+
+  const handleButton = (event) => {
+    setCustom(0);
+    setTipValue(event.target.value);
   };
 
   const handleCustom = (event) => {
@@ -20,13 +27,41 @@ const TipContent = () => {
   const handlePeople = (event) => {
     setPeople(event.target.value);
   };
+
+  const handleReset = () => {
+    setTotal('');
+    setTipValue('');
+    setCustom('');
+    setPeople('');
+  };
+
+  const decideTip = (custom, tipValue) => {
+    if (custom != 0) {
+      return custom;
+    } else {
+      return tipValue;
+    }
+  };
+
   return (
-    <div className="bg-white py-12 rounded-2xl lg:px-44 lg:py-32 w-screen">
+    <div className="bg-white py-12 rounded-2xl w-screen lg: max-w-5xl lg:flex lg:flex-row lg:flex-wrap">
       <div className="px-8">
         {' '}
-        <Bill onChange={handleTip} value={total} />
-        <SelectTip onChange={handleCustom} value={custom} />
-        <NumberOfPeople onChange={handlePeople} value={people} />
+        <div>
+          <Bill onChange={handleTotal} value={total} />
+          <SelectTip
+            onChange={handleCustom}
+            onClick={handleButton}
+            customValue={custom}
+          />
+          <NumberOfPeople onChange={handlePeople} value={people} />
+        </div>
+        <TipAmount
+          total={total}
+          tip={decideTip(custom, tipValue)}
+          people={people}
+          reset={handleReset}
+        />
       </div>
     </div>
   );

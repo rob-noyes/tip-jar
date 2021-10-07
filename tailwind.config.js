@@ -5,7 +5,10 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme('colors'),
       teal: '#C5E4E8',
+      darkgreen: '#00474B',
+      lightteal: '#25C2AD',
     }),
+
     fontFamily: {
       space: ['Space Mono', 'monospace'],
     },
