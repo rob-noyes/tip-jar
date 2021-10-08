@@ -8,7 +8,7 @@ const { useState } = require('react');
 const TipContent = () => {
   const [total, setTotal] = useState('');
   const [custom, setCustom] = useState('');
-  const [people, setPeople] = useState(0);
+  const [people, setPeople] = useState(1);
   const [tipValue, setTipValue] = useState(0);
 
   const handleTotal = (event) => {
@@ -16,7 +16,7 @@ const TipContent = () => {
   };
 
   const handleButton = (event) => {
-    setCustom(0);
+    setCustom('');
     setTipValue(event.target.value);
   };
 
@@ -32,7 +32,7 @@ const TipContent = () => {
     setTotal('');
     setTipValue('');
     setCustom('');
-    setPeople('');
+    setPeople(1);
   };
 
   const decideTip = (custom, tipValue) => {
