@@ -36,7 +36,7 @@ const TipContent = () => {
   };
 
   const decideTip = (custom, tipValue) => {
-    if (custom != 0) {
+    if (custom !== 0) {
       return custom;
     } else {
       return tipValue;
@@ -44,10 +44,9 @@ const TipContent = () => {
   };
 
   return (
-    <div className="bg-white py-12 rounded-2xl w-screen lg: max-w-5xl lg:flex lg:flex-row lg:flex-wrap">
-      <div className="px-8">
-        {' '}
-        <div>
+    <div className="bg-white py-12 rounded-2xl w-full lg:w-4/6 lg:max-w-4xl lg:h-8/12">
+      <div className="px-8 lg:flex lg:flex-row lg:justify-center lg:h-full lg:w-full">
+        <div className="lg:h-full flex flex-col justify-between">
           <Bill onChange={handleTotal} value={total} />
           <SelectTip
             onChange={handleCustom}
