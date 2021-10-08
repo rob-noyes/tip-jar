@@ -32,11 +32,11 @@ const TipContent = () => {
     setTotal('');
     setTipValue('');
     setCustom('');
-    setPeople(1);
+    setPeople('');
   };
 
   const decideTip = (custom, tipValue) => {
-    if (custom !== 0) {
+    if (custom !== 0 && custom !== '') {
       return custom;
     } else {
       return tipValue;
