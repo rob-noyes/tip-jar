@@ -14,7 +14,7 @@ With a simple yet intuitive interface, you can input the total of your check, an
 
 ### Frameworks Used
 
-This app was made using Reactjs and TailwindCSS. Both of these were the first time I have completed a solo porject using them.  
+This app was made using Reactjs and TailwindCSS. Both of these were the first time I have completed a solo project using them.  
 
 Within React I was focusing on lerning hooks and useState to help make the application run smooth while also having an organized codebase.  By utilizing TailwindCSS I was able to quickly produce the CSS side, and found that it is a quicker method to create and adapt an app.  
 
