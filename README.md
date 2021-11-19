@@ -6,7 +6,7 @@ Demo: https://rob-noyes.github.io/tip-jar/
 
 We've all been there, looking at the check and trying to figure out what to tip.  Espeically in the pandemic times, we want to go above and beyond for the service industry workers. 
 
-This app is made from someone who has worked in the service industry in the past and knows its hardships.  By having a simple layout of inputting your total, you can simply click or tap the percentage you want to give, or put in a custome precentage as well. 
+This app is made from someone who has worked in the service industry in the past and knows its hardships.  By having a simple layout of inputting your total, you can simply click or tap the percentage you want to give, or put in a custom precentage as well. 
 
 ### Layout
 
